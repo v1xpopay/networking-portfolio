@@ -24,17 +24,3 @@ Handshake
 ↓
 
 Connected
-
-so if you are calling a service from port 80 but diff protocol, it looks like 
-                 Port 80
-                   │
-        ┌──────────┴──────────┐
-        │                     │
-     TCP Scan             UDP Scan
-        │                     │
-socket.SOCK_STREAM     socket.SOCK_DGRAM (python syntex calling)
-        │                     │
- connect()              send packet
-        │                     │
-Handshake?                 reply,
-                        maybe not
